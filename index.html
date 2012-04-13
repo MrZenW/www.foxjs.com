@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> ._.foxJS </title>
+  <meta charset="UTF-8" />
+  <meta name="Generator" content="Sublime Text 2">
+  <meta name="Author" content="z.En,ZenWong">
+  <meta name="Keywords" content="foxJS是一个简单的轻量级的JS框架,foxJS,foxJS framework,js,JavaScript,JavaScript framework,JavaScript框架,">
+  <meta name="Description" content="foxJS是一个简单的轻量级的JS框架">
+  <meta name="Robots" contect="all|index|follow">
+  <meta http-equiv="windows-Target" contect="_top">
+ </head>
+ <style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	a{
+		border:0px;
+
+	}
+	body{
+		width:998px;
+		margin:0px auto;
+		padding:0px;
+		background-color:#f2f2f2;
+	    font: 15px/1.625 "Helvetica Neue",Helvetica,Arial,sans-serif;
+		color:#333;
+	}
+	.cb{
+		clear:both;
+
+	}
+	.text{
+		background-color:#ffffff;
+		
+	}
+	.logo{
+		text-align:center;
+		padding-top:30px;
+	}
+	.intro{
+		width:780px;
+		margin:0px auto;
+	    border-radius: 5px 5px 5px 5px;
+		padding:30px;
+		box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+	}
+	.intro strong{
+		/*text-decoration:underline;*/
+		line-height:40px;
+	}
+	.center{
+		width:998px;
+	}
+	ul{
+		margin:0px 0px 0px 20px;
+	}
+	#colophon{
+		padding:30px 0px;
+		margin:0px auto;
+		color: #666666;
+		
+		text-align:center;
+	}
+	#colophon a{
+		color: #666666;
+		
+	}
+	.code{
+		/*background-color:#ffff88;*/
+		background-color:#FFFACD;
+		border-radius: 5px 5px 5px 5px;
+		padding:0px 10px;
+	}
+	.code tr{
+		/*background-color:#ffff88;*/
+	}
+	.ptitle{
+		padding:0px 10px;
+		border-radius: 5px 5px 5px 5px;
+		background-color:#f2f2f2;
+		margin:5px 0px 5px 0px;
+
+	}
+	.user_logo_box{
+		border-radius: 15px 15px 15px 15px;
+		background-color:#f2f2ff;
+		width:232px;
+		height:100px;
+		text-align:center;
+		margin:10px;
+		float:left;
+	}
+	.bg_cfcfcf{
+		background-color:#cfcfcf;
+
+	}
+	.bg_ffffff{
+		background-color:#ffffff;
+
+	}
+
+ </style>
+ <script src="./foxjs_v1.1.1r.js"></script>
+ <script type="text/javascript">
+ onload = function(){
+ 	document.body.scrollTop=0;
+
+
+ };
+
+ </script>
+ <body>
+	<div class="logo">
+		<img src="foxjs2.png"/>
+	</div>
+	<div class="center">
+		<div class="text intro">
+			<p class="ptitle"><strong>foxJS是什么？</strong></p>
+			<p>foxJS是一个简单的轻量级的JS框架。</p>
+			<p class="ptitle"><strong>她有什么优点，为什么要使用她？</strong></p>
+			<p>foxJS很小（未压缩的foxjs.js文件只有不到20K），但依然强大，她只提供常用功能，对于前端工作人员来说她再适合你不过了。</p>
+			<p>她没有所谓的框架变量——他不会改变从选择器获得的DOM元素的类型。也就是说，你通过FOXJS选择器（或者叫装载器）获得的元素依然是他在DOM树中的类型，而非其他的一些匪夷所思的变量</p>
+
+			<p class="ptitle"><strong>她能做什么？</strong></p>
+			<p>她很适合前端人员完成普通的功能，而不需要再去导入较为庞大的其他JS框架。</p>
+			<p class="ptitle"><strong>当前版本</strong></p>
+			<p>
+			foxJS当前的版本为1.2
+			<br />
+			1.2新增功能：
+			<br />
+			<ul>
+				<li>修改了装载器的函数名（从单下划线”_“，改变为双下划线“__”，注意：foxJS特性变量，也就是我们说的foxBaby变量依然为单下划线“_”）</li>
+				<li>加强了选择器的功能，可以对任何对象进行包装。并且加入了第二个参数（renew）用于给元素重新绑定FOXJS特性。</li>
+				<li>加强了change函数的功能，允许用户传递两个函数的应用从而切换的执行这两个函数</li>
+				<li>加强了css函数，为CSS函数的第一个参数添加了JSON的支持，用于可以批量设置CSS样式</li>
+				<li>加入了新的import和importOnce以及importAgain函数，可以动态载入JS脚本。</li>
+				<li>加入了insertBefore函数，a._.insertBefore(b) 吧a插入到b的前面</li>
+				<li>加入了对文本子节点和NODE子节点的分开获取</li>
+				<li>为foxBaby加入了getParent和getChilds函数，用于获取当前的父节点和子节点.</li>
+			</ul>
+			<p class="ptitle"><strong>当前功能</strong></p>
+			<p><span><i>当前的foxJS提供以下功能：</i></span>
+				<ul>
+				<li>简易的选择器</li>
+				<li>节点的选择和控制</li>
+				<li>AJAX提交和回调</li>
+				<li>跨域的AJAX提交和回调</li>
+				<li>JS数据类型转换</li>
+				<li>事件绑定</li>
+				<li>JS数据类新判断</li>
+				<li>CSS样式表控制</li>
+				<li>CLASS控制</li>
+				<li>do动作执行器</li>
+				<li>等等。。。</li>
+				
+				</ul>
+			</p>
+			<p class="ptitle"><strong>如何使用？</strong></p>
+			<p><span>首先：<br />
+				<a href="https://github.com/zenboss/foxjs">下载foxjs.js文件</a>，并且导入到你的页面中.
+				<br />
+				导入后你就可以马上使用foxjs了。
+			</span></p>
+			<p><span>开始使用：
+				<table class="code">
+				<tr>
+				<td>var id123 = document.getElementById("id123");</td><td></td>
+				</tr>
+				<tr>
+				<td>__(id123);</td><td>//将ID为id123的元素装载上foxjs特性</td>
+				</tr>
+				<tr>
+				<td>id123._.hidden();</td><td>//将元素设为隐藏；</td>
+				</tr>
+				<tr>
+				<td>id123._.hasClass("class1");</td><td>//判断元素的样式中是否使用了class1这个CSS样式</td>
+				</tr>
+				<tr>
+				<td>__.getSender();</td><td>//获得绑定并且调用当前函数的那个元素（按钮、图片、文本框），而非当前窗口。一般在函数内使用该函数。</td>
+				</tr>
+				<tr>
+				<td>__.time();</td><td>//获得当前的时间戳</td>
+				</tr>
+				<tr>
+				<td>__.date('Y-m-d H:i:s');</td><td>//获得当前时间的人类可识别格式</td>
+				</tr>
+				<tr>
+				<td>id123._.parent;</td><td>//获得元素父级节点</td>
+				</tr>
+				<tr>
+				<td>id123._.childs;</td><td>//获得元素子节点数组</td>
+				</tr>
+				<tr>
+				<td>id123._.nextNode;</td><td>//获得元素后的兄弟元素节点数组(紧贴该元素的下标为0，距离自己越远下标越大)</td>
+				</tr>
+				<tr>
+				<td>id123._.nextText;</td><td>//获得元素后的兄弟文本节点数组(紧贴该元素的下标为0，距离自己越远下标越大)</td>
+				</tr>
+				<tr>
+				<td>//等等。。。</td><td></td>
+				</tr>
+				</table>
+											
+			
+			</span></p>
+			<p class="ptitle"><strong>跨域的ajax提交</strong></p>
+			<p>
+				<p>
+					在foxjs中有一个__.crossAjax(json)函数
+					<br />
+					它的参数是一个json对象，其中需要包含url,data,callback这3个项目
+					<br />url:请求到的url地址<br />data:一个字符串形势的query<br />callback:请求成功后的回调函数,包含一个data参数
+					<br />foxjs会自动将一个名为__callback的变量通过GET方式的query发送到服务器，服务器可以通过这个变量来获得请求方提供给你调用的js函数的名字。
+				</p>
+				<p>服务器端的工作：
+					<br />foxjs的跨域是使用动态导入javascript实现的，所以，在服务器端开发者需要输出js语言格式的文本。
+					<br />以php为例，你的业务逻辑过程可能会很复杂，但最后的时候我们还是建议你使用php输出类似：
+					<br />echo $__GET['__callback']."('数据')";<br /> 的文本给请求方，这样你就可以将你需要提交的数据提交到请求方的前端界面js中.
+
+				</p>
+				<p>
+					例子：<br />
+					<u>js端：</u>
+<pre class="code">
+__.crossAjax({
+	url:'http://www.foxjs.com/crossAjax_sum.php', 
+	//这个地址是真实存在的，你可以试以下
+	data:'num1=10&num2=15',
+	callback:'foxjs_sum'
+
+});
+function foxjs_sum(data){
+	alert(data);
+}
+</pre>
+	<u>服务器端（php）：</u>
+<pre class="code">
+$callback = $_REQUEST['__callback'];
+$data = intval($_GET['num1'])+intval($_GET['num2']);
+echo $callbakc."('{$data}')";
+</pre>
+				</p>
+			</p>
+			<p class="ptitle"><strong>装载器（也可以通过id对元素进行选择）</strong></p>
+			<p>
+<pre class="code">
+__('zen'); //这样,id为zen的元素将选择，并且包装上了foxjs特性。
+</pre>
+			由于我们都知道js的变量传递是通过引用来的，所以我们不需要通过一个变量来接住装载器的返回值，但这并不代表装载器就没有返回值，它的返回值是就是包装了foxjs特性的元素。在一些特殊情况下，你可能需要通过返回值直接做些什么，如：
+<pre class="code">
+__('zen')._.hidden();
+</pre>
+			
+			</p>
+			<p class="ptitle"><strong>装载元素数组</strong></p>
+			<p>有时候你可能通过getElementsByTagName()获得了一个元素数组，你可以将这个数组直接放入装载器，装载器会自动识别它，并且为数组中的每一项包装上foxjs特性，再返回给你。</p>
+			
+			<p class="ptitle"><strong>动作执行器（do）</strong></p>
+			<p>
+				<u><i>__.do()</i></u>函数，一个用于设定在时间间隔内反复执行动作的函数，函数的参数是一个对象，2个必选项——function:这次动作反复执行的函数引用，time:动作执行的间隔时间毫秒数。2个可选项——endCount:规定动作执行的绝对次数，endString:动作结束的字符串表达式。如果可选项都不存在，那么动作将永远执行下去。如果都存在，那么每次执行函数时任何一个条件被满足的话动作都停止。
+			<br />他的返回值是本次动作的ID，你可以使用__.unDo()函数将该动作停止
+			<br />
+			更多的时候，前端开发者可以用她来设定一些动画效果；
+
+			</p>
+
+			<p class="ptitle"><strong>__.toString(val)</strong></p>
+			<p>这个toString是属于foxjs变量（_）的，它可以将更多的变量转换为字符串形式。例如：
+			<br />
+<pre class="code">
+var a = Array('zen',new Array('hello','foxjs'),'wong');
+var b = {name:'zenwong',sex:"2",about:a};
+a ＝ _toString(a); 
+//返回字符串：
+//["zen",["hello","foxjs"],"wong"]
+b = _toString(b); 
+//返回字符串：
+//{name:"zenwong",
+//	sex:"2",
+//	about:["zen",["hello","foxjs"],"wong"]}
+
+
+</pre>
+			</p>
+
+			<p class="ptitle"><strong>常用函数</strong></p>
+			<p>id123._.toString()</p>
+			<p>这个toString方法和先前介绍的foxjs变量的是不一样的。该函数是属于元素对象的，用于获得一个元素的字符型表达，规则是首先返回元素的value，不存在value的话就返回元素的innerHTML，如果innerHTML为空的话返回元素强行字符串化后的结果。</p>
+			<p class="ptitle"><strong>插件编写</strong></p>
+			<p>
+				扩展性也是foxJS所关注到的一块，为foxjs编写插件非常简单，我们为你提供了很好的插件编写环境，你只需要把自己的思想整理好，注意一点约束，就可以编写出一个非常出色的插件。
+				<br />
+				<u>从例子开始，写下以下代码：</u>
+<pre class="code">
+__.fox.myFunc = function(){
+	var val = this.element.value;
+	return val;
+
+};
+</pre>
+				第一行：__.fox是什么？fox是foxjs内部的一个变量，她就是你装载元素后使用的foxjs变量（_），就是那个下划线。为这个变量添加任何函数都将可以让之后装载foxjs特性的元素拥有这个函数。
+				<br />
+				第二行：this.element是什么？她是被装载的元素的引用，通过她，你可以直接操作元素。
+				<br />
+				只需要这样，你的插件就完成了。
+				<br />
+			</p>
+			<p class="ptitle"><strong>还有呢？</strong></p>
+			<p>这个页面正在不断完善中，不久你就可以看到更多的内容。</p>
+			<p class="ptitle"><strong>他们在用foxJS</strong></p>
+
+ 			<div class="ptitle">
+				<div class="user_logo_box bg_ffffff"><a href="http://www.zenboss.com"><img src="http://www.zenboss.com/images/c/c9/Logo.png" style="margin:30px auto" /></a></div>
+				<div class="user_logo_box bg_ffffff"><a href="http://www.zenw.org"><img src="http://zenw.org/zenwong_bl.jpg" style="width:150px;margin:30px auto" /></a></div>
+				<div class="user_logo_box bg_cfcfcf"><a href="mailto:wzy#z-en.com" style="line-height:100px;">你的站点也加入了使用？</a></div>
+				<div class="cb"></div>
+			</div>
+			<p class="ptitle"><strong>友情链接</strong></p>
+			<p>
+				<a href="http://dns.zenboss.com">zenboss DNS</a>
+			</p>
+			
+		</div>
+	</div>
+	<div id="colophon"><a href="http://www.z-en.com">&copy;&nbsp;2011&nbsp;z.En</a></div>
+
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28017469-1']);
+  _gaq.push(['_setDomainName', '.foxjs.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+ </body>
+</html>
